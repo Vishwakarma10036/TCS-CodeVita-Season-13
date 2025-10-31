@@ -1,0 +1,95 @@
+Max Match box
+Problem Description
+Mr. Firestick, the chief designer at a prominent matchbox manufacturing firm, is recognized for his innovative and efficient box designs. His current assignment involves creating a box that accommodates all matchsticks precisely while minimizing material usage.
+
+The company specializes in manufacturing matchboxes of diverse geometries. For this project, Mr. Firestick is provided with a rectilinear template representing the flat sheet intended for box fabrication. This sheet will be cut and folded to a vertical height H to construct the box. The objective is to identify the optimal height H that maximizes the box's volume without altering its structural integrity.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@5cbf9e9f:image1.png
+
+The square depicted above initially possesses a side length of 4 units. When folded upward by 0.5 units to construct the box, each side is consequently reduced by 0.5 units at both ends, resulting in a new side length of 3 units.
+
+The volume of the box is then calculated as:
+Volume = side × side × height = 3 × 3 × 0.5 = 4.5 cubic units.
+
+While reducing the sides, it must be ensured that each edge retains at least 0.1 units of length after folding.
+
+The height H must be chosen in multiples of 0.1 units. Determine the value of H that results in the maximum possible volume of the box - that is, the height at which the box can hold the greatest number of matchsticks.
+
+Constraints
+4 <= N <= 15
+
+0<= x, y <= 25
+
+Input
+The first Line contains a single integer N representing the number of corners of the rectilinear shape.
+
+Next N lines each contain two integers separated by space representing the coordinates (x, y) sequentially.
+
+Output
+Print the maximum volume with 2 decimal places.
+
+Time Limit (secs)
+1
+
+Examples
+Example 1
+
+Input
+
+6
+
+0 0
+
+2 0
+
+2 2
+
+1 2
+
+1 1
+
+0 1
+
+Output
+
+0.31
+
+Explanation
+
+The diagram below depicts the above input.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@5cbf9e9f:image2.png
+
+If H is set to 0.2, each side is decreased by 0.2 units. The corresponding shape is illustrated in the image. At this height, the box attains a volume of 0.31, representing the maximum possible volume.
+
+Example 2
+
+8
+
+0 0
+
+8 0
+
+8 2
+
+5 2
+
+5 3
+
+3 3
+
+3 2
+
+0 2
+
+Output
+
+3.94
+
+Explanation
+
+The diagram below depicts the above input.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@5cbf9e9f:image3.png
+
+If we select H = 0.4, each side is decreased by 0.4 units. The figure below illustrates the resultant configuration. This height yields a box volume of 3.94, representing the maximum volume attainable by folding the sides.

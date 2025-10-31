@@ -1,0 +1,95 @@
+Enthusiastic Vijay
+Problem Description
+
+Vijay is a programming enthusiast who applies real-world observations to develop and solve complex coding challenges.
+
+During a visit to a petrol pump, Vijay noticed the LED display on the fuel dispenser and was inspired to create a problem based on this scenario.
+
+A typical LED layout and light arrangement is shown below. The red LEDs indicate the segments that are turned on, while the others are off.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4e7095ac:image1.png
+
+Vijay created a custom 7 segment display which is shown below. Each digit is represented in a 3*3 matrix.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4e7095ac:image2.pngcom.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4e7095ac:image3.png
+
+Given the seven-segment representation of a multi-digit number, you may toggle up to K LEDs, subject to the following constraints:
+
+Only one toggle per digit is permitted.
+A toggle flips a single LED segment, changing the digit to the smallest possible valid alternative.
+At each step, select the toggle that yields the minimum replacement, prioritizing the leftmost digit in case of a tie.
+After performing at most K toggles (i.e., as many toggles as possible without exceeding K), the resulting number is called the modified number.
+The task is to determine the lexicographically next anagram of the modified number and calculate the absolute difference between the original number and this anagram.
+
+Constraints
+
+1 <= Number of digits in the number <= 30
+
+1 <= K <= 10
+
+The inputs are generated in such a way that next anagram is always possible.
+
+Input
+
+The first three lines represent the custom seven-segment display of the selected number.
+
+Last line consists of a single integer K.
+
+Output
+
+Output the absolute difference between the original number and the lexicographically next anagram of its modified version.
+
+Time Limit (secs)
+1
+
+Examples
+
+Example 1
+
+Input
+
+ _  _  _  _  _ 
+
+  | _||_|  || |
+
+ _|  |  |  ||_|
+
+2
+
+Output
+
+47
+
+Explanation
+
+Given input is shown below -
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4e7095ac:image4.png
+
+The given number is 68970. We are allowed to do at most 2 toggles. We can change the digits 8 to 7 and 7 to 1, which gives the modified number 67910. The lexicographically next anagram of 67910 is 69017. The absolute difference between the original number and the lexicographically next anagram of its modified version is 47. Hence, the output is 47 (69017 - 68970).
+
+Example 2
+
+Input
+
+       _  _  _ 
+
+  || || |  || |
+
+  || || | _||_|
+
+1
+
+Output
+
+140
+
+Explanation
+
+Given input is shown below -
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4e7095ac:image5.png
+
+The given number is 12460. We are allowed to do at most 1 toggle. From left to right, we can change the digit 4 to 0, making the number 12060. The alphabetically next anagram is 12600.
+
+The absolute difference between the original number and the alphabetically next anagram of its modified version is 140. Hence print the same.
